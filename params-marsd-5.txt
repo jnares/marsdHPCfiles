@@ -1,0 +1,67 @@
+#
+# Should we use the upper bound value
+#
+UseUpperBound TRUE
+
+# If you don't have this it (should) default to the known value
+UpperBoundVal 2500
+
+FixOneLeft TRUE
+
+MintoOutputLevel 0
+MintoNodeSelection 5
+
+MintoTimeLimit 14400000
+
+ 
+#
+# Use this parameter when you would like orbital to generate all solutions
+#
+GenerateAllSolutions TRUE
+
+#
+# Use this to check how many distinct isomorphism classes are
+# only active when GenerateAllSolutions = TRUE 
+#
+CalculateIsoClasses TRUE
+
+
+#
+# File to which to write solutions
+#
+SolutionFileName all.sol
+
+
+# Are the generators read in from a file.  Ordering of vars must be same as MPS file)
+GeneratorsFromFile TRUE
+GeneratorsFileName generators_MARSD5
+
+###### parameters for marsd-balanced
+
+#
+# to perform multiple times the Knuth prediction algorithm
+# only when MintoNodeSelection 7
+#
+NTimesKnuth 0
+
+# max time trying to solve a single node (sec)
+# = max time spent in cloud generation
+
+tsmax 15
+
+# max time trying to solve a trivial node (sec)
+ttmax 1
+
+# max size where sol time < tsmax on an average node (estimated)
+sizeSmall 8000
+
+# max size where sol time < ttmax on an average trivial node (estimated)
+sizeTrivial 10
+
+# max time spent in cloud generation (sec)
+
+tcmax 7
+
+# max num nodes in generated cloud
+cloudsizeMax 12
+

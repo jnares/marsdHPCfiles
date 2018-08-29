@@ -1,0 +1,19 @@
+The goal of this repository is to write the necessary files to run MARS-enumerations on VSC
+
+The enumeration algorithm involves a huge number of embarranssingly parallel jobs. The running process is:
+
+0. A bunch of initial files (<20 files, <60M)
+1. A batch of, say, 1000 20minute-jobs is submitted for execution
+2. Once the batch is finished a, .sh script runs, collects information and prepare the files for the next batch. The script outputs the number of files yet to be processed (without counting the ones in the generated batch)
+
+And we loop 1-2 until the script outputs 0
+
+These are input files
+      basicProblem_5.mps
+      generators_MARSD5
+      params-marsd-5.txt
+      marsd: executable
+      base.fix: information on the root node
+
+marsdOneIter.sh is the script, it calls make-hpc-marsd.py, which creates the individual files for each job and the args_file
+The files example_batch.pbs and example_batch.sh are an example of steps 1&2, where args.txt is the input data file

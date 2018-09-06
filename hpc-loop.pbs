@@ -1,0 +1,8 @@
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=20:ivybridge
+#PBS -l walltime=00:05:00
+#PBS -A lp_doe_mip
+
+cd ${PBS_O_WORKDIR}
+
+./marsd $params $fixfile

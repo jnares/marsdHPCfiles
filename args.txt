@@ -1,3 +1,2 @@
 params,fixfile
-params-marsd-5.txt,base2.fix
 params-marsd-5.txt,base.fix

@@ -1,8 +1,10 @@
 # marsdsHPCfiles
 
-The goal of this repository is to write the necessary files to run MARS-enumerations on VSC
+The goal of this repository is to write the necessary files 
+to run MARS-enumerations on VSC
 
-The enumeration algorithm involves a huge number of embarranssingly parallel jobs. The running process is:
+The enumeration algorithm involves a huge number of embarranssingly 
+parallel jobs. The running process is:
 
 0. A bunch of initial files (<20 files, <60M)
 1. A batch of, say, 1000 20minute-jobs is submitted for execution

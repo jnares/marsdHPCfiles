@@ -1,0 +1,16 @@
+# marsdsHPCfiles
+
+The goal of this repository is to write the necessary files 
+to run MARS-enumerations on VSC
+
+To run in hpc type
+
+source hpc-loop.sh 5 3
+
+IT DOES NOT WORK, gives this error
+
+total number of work items: 1
+qsub: script file ' ' cannot be loaded - No such file or directory
+### error: failed to submit job: 
+    /usr/local/bin/qsub -C '#PBS' -N 'hpc-loop.pbs' -l 'nodes=1:ppn=20:ivybridge' -o 'hpc-loop.pbs.o' -e 'hpc-loop.pbs.e' ' ' worker.pbs
+-bash: -l: command not found
